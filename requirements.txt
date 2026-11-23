@@ -10,12 +10,12 @@
 # MyQuant-owned numerical factor package; Qlib training remains source based.
 -e .[analysis,research]
 lightgbm>=4.7
-numpy==2.5.4
+numpy>=2.5.4
 pandas>=3.0.6
 scikit-learn>=1.5
 mlflow>=3.18.0
-pyarrow==26.0.0
-loguru==0.7.3
+pyarrow>=26.0.0
+loguru>=0.7.3
 # custom_utils.py（测试经 TimerRecorder 引用）顶层绘图依赖
 matplotlib
 seaborn
