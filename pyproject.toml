@@ -7,11 +7,11 @@ name = "myquant-research-factors"
 version = "0.1.0"
 requires-python = ">=3.12"
 description = "MyQuant-owned factor research numerical kernels"
-dependencies = ["numpy==2.5.4", "pandas>=3.0.6", "numba==0.68.1", "loguru==0.7.3"]
+dependencies = ["numpy>=2.5.4", "pandas>=3.0.6", "numba>=0.68.1", "loguru>=0.7.3"]
 
 [project.optional-dependencies]
 analysis = ["fincore==0.3.0", "matplotlib", "seaborn", "scipy", "statsmodels"]
-research = ["duckdb>=2.0.0", "pyarrow==26.0.0", "PyYAML==6.0.3", "pandas-market-calendars==5.3.2", "tqdm==4.67.1"]
+research = ["duckdb>=2.0.0", "pyarrow>=26.0.0", "PyYAML>=6.0.3", "pandas-market-calendars>=5.3.2", "tqdm>=4.67.1"]
 
 [tool.setuptools.packages.find]
 include = ["myquant_factors*"]
