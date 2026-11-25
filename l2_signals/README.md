@@ -61,6 +61,7 @@ gen0 六族索引与定义卡：[`docs/l2_signals/2026-11-04-gen0-signal-family-
 | `reproduce_quiet_dip_tech.py` | QUIET_DIP_TECH 专用复现 |
 | `alpha158_spec.json` | 官方 158 因子表达式（从 `qlib.contrib.data.loader.Alpha158DL` 导出，作为对齐基准） |
 | `alpha158_build.py` | core rollup OHLCV → 158 因子 parquet（pandas 复刻 qlib 语义） |
+| `tdx_rsi_build.py` | core rollup 收盘 → 通达信 RSI6/12/24 parquet（`SMA(X,N,1)` = `ewm(alpha=1/N, adjust=False, ignore_na=True)`，停牌日跳过） |
 | `search_alpha158.py` | C1 池（大单量≥2×前日）+ 大单特征 + 168 维贪心搜索（H1/H2 切分） |
 | `search_ma20_mega.py` | gen2 池（净大单量/流通>2% × MA20 上穿）+ Alpha158 贪心搜索 + 内置跨年冻结诊断；`--exclude-limit-close` 可买性硬过滤（→ [MEGA_MA20_BREAK 已 deprecated](../docs/l2_signals/2026-11-05-ma20-mega-gen2-search.md)） |
 | `validate_ma20_mega_break.py` | MEGA_MA20_BREAK 冻结阈值跨年打分（发现年不覆写 export 文件） |
